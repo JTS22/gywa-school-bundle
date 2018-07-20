@@ -1,0 +1,20 @@
+{
+	"name": "gywa/school-bundle",
+	"description": "Create lists for teachers and subjects.",
+	"homepage": "https://gy-waldstrasse.de",
+	"type": "contao-bundle",
+	"license": "MIT",
+	"version": "1.0",
+	"require": {
+		"php": ">=7.0",
+		"contao/core-bundle": "^4.4"
+	},
+	"autoload": {
+		"psr-4": {
+			"GyWa\\OrganizerBundle\\": "src"
+		}
+	},
+	"extra": {
+		"contao-manager-plugin": "GyWa\\OrganizerBundle\\ContaoManager\\Plugin"
+	}
+}
