@@ -112,8 +112,8 @@ $GLOBALS['TL_DCA']['tl_subject'] = array
             'exclude' => true,
             'inputType' => 'text',
             'serach' => true,
-            'eval' => array('mandatory' => true, 'maxlenght' => 6, 'tl_class' => 'w50', 'unique' => true),
-            'sql' => "varchar(6) NOT NULL default ''"
+            'eval' => array('mandatory' => true, 'maxlenght' => 10, 'tl_class' => 'w50', 'unique' => true),
+            'sql' => "varchar(10) NOT NULL default ''"
         ),
         'referencePage' => array(
             'label' => &$GLOBALS['TL_LANG']['tl_subject']['referencePage'],
