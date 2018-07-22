@@ -52,6 +52,12 @@ $GLOBALS['TL_DCA']['tl_subject'] = array
                 'href' => 'act=edit',
                 'icon' => 'edit.gif'
             ),
+            'copy' => array
+            (
+                'label' => &$GLOBALS['TL_LANG']['tl_subject']['copy'],
+                'href' => 'act=copy',
+                'icon' => 'copy.svg'
+            ),
             'delete' => array
             (
                 'label' => &$GLOBALS['TL_LANG']['tl_subject']['delete'],
@@ -112,16 +118,16 @@ $GLOBALS['TL_DCA']['tl_subject'] = array
             'exclude' => true,
             'inputType' => 'text',
             'serach' => true,
-            'eval' => array('mandatory' => true, 'maxlenght' => 10, 'tl_class' => 'w50', 'unique' => true),
-            'sql' => "varchar(10) NOT NULL default ''"
+            'eval' => array('mandatory' => true, 'maxlenght' => 6, 'tl_class' => 'w50', 'unique' => true),
+            'sql' => "varchar(6) NOT NULL default ''"
         ),
         'referencePage' => array(
             'label' => &$GLOBALS['TL_LANG']['tl_subject']['referencePage'],
             'inputType' => 'pageTree',
             'foreignKey' => 'tl_page.title',
-            'eval' => array('fieldType' => 'checkbox', 'tl_class' => 'clr'),
-            'sql' => "BLOB null",
-            'relation' => array('type' => 'hasMany', 'load' => 'lazy')
+            'eval' => array('fieldType' => 'radio', 'tl_class' => 'clr'),
+            'sql' => "int(10) unsigned NOT NULL default '0'",
+            'relation' => array('type' => 'hasOne', 'load' => 'lazy')
         )
     )
 );

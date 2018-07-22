@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2">
+    <file datatype="php" original="src/Resources/contao/languages/en/modules.php" source-language="en">
+        <body>
+            <trans-unit id="MOD.gywa_subjects.0">
+                <source>Subjects</source>
+            </trans-unit>
+            <trans-unit id="MOD.gywa_subjects.1">
+                <source>Manage school subjects</source>
+            </trans-unit>
+            <trans-unit id="MOD.gywa_teachers.0">
+                <source>Teachers</source>
+            </trans-unit>
+            <trans-unit id="MOD.gywa_teachers.1">
+                <source>Manage school teachers</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
