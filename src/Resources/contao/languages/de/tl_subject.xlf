@@ -1,0 +1,82 @@
+<?xml version="1.0" ?><xliff version="1.2">
+    <file datatype="php" original="src/Resources/contao/languages/de/tl_subject.php" source-language="en" target-language="de">
+        <body>
+            <trans-unit id="tl_subject.new.0">
+                <source>New subject</source>
+                <target></target>
+            </trans-unit>
+            <trans-unit id="tl_subject.new.1">
+                <source>Create a new subject</source>
+                <target></target>
+            </trans-unit>
+            <trans-unit id="tl_subject.show.0">
+                <source>Subject details</source>
+                <target></target>
+            </trans-unit>
+            <trans-unit id="tl_subject.show.1">
+                <source>Show the details of subject ID %s</source>
+                <target></target>
+            </trans-unit>
+            <trans-unit id="tl_subject.edit.0">
+                <source>Edit subject</source>
+                <target></target>
+            </trans-unit>
+            <trans-unit id="tl_subject.edit.1">
+                <source>Edit subject ID %s</source>
+                <target></target>
+            </trans-unit>
+            <trans-unit id="tl_subject.copy.0">
+                <source>Duplicate subject</source>
+                <target></target>
+            </trans-unit>
+            <trans-unit id="tl_subject.copy.1">
+                <source>Duplicate subject ID %s</source>
+                <target></target>
+            </trans-unit>
+            <trans-unit id="tl_subject.delete.0">
+                <source>Delete subject</source>
+                <target></target>
+            </trans-unit>
+            <trans-unit id="tl_subject.delete.1">
+                <source>Delete subject ID %s</source>
+                <target></target>
+            </trans-unit>
+            <trans-unit id="tl_subject.title.0">
+                <source>Title</source>
+                <target></target>
+            </trans-unit>
+            <trans-unit id="tl_subject.title.1">
+                <source>The subject's name</source>
+                <target></target>
+            </trans-unit>
+            <trans-unit id="tl_subject.cssClass.0">
+                <source>CSS Class</source>
+                <target></target>
+            </trans-unit>
+            <trans-unit id="tl_subject.cssClass.1">
+                <source>One or more css-classes added to all elements describing this subject</source>
+                <target></target>
+            </trans-unit>
+            <trans-unit id="tl_subject.abbreviation.0">
+                <source>Abbreviation</source>
+                <target></target>
+            </trans-unit>
+            <trans-unit id="tl_subject.abbreviation.1">
+                <source>One to six letters used to abbreviate the subject</source>
+                <target></target>
+            </trans-unit>
+            <trans-unit id="tl_subject.referencePage.0">
+                <source>Subject Page</source>
+                <target></target>
+            </trans-unit>
+            <trans-unit id="tl_subject.referencePage.1">
+                <source>A page with more information on the given subject</source>
+                <target></target>
+            </trans-unit>
+            <trans-unit id="tl_subject.title_legend">
+                <source>Subject properties</source>
+                <target></target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
