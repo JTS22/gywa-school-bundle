@@ -5,6 +5,7 @@ services:
           - "@database_connection"
           - "@monolog.logger"
     gywaschoolbundle.contentelement.subjectlist:
-        class: Gywa\SchoolBundle\Controller\ContentElement\ContentSubjectListController
+        class: GyWa\SchoolBundle\Controller\ContentElement\SubjectListController
         tags:
           - { name: contao.content_element, category: gywa_school }
+        public: true

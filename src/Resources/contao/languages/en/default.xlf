@@ -8,10 +8,10 @@
             <trans-unit id="CTE.gywa_subjects.1">
                 <source>All elements contained within the GyWa SchoolBundle</source>
             </trans-unit>
-            <trans-unit id="CTE.content_subject_list.0">
+            <trans-unit id="CTE.subject_list.0">
                 <source>Subject list</source>
             </trans-unit>
-            <trans-unit id="CTE.content_subject_list.1">
+            <trans-unit id="CTE.subject_list.1">
                 <source>A list of all subjects, optionally sorted by category</source>
             </trans-unit>
         </body>

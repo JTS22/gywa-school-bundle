@@ -14,6 +14,7 @@ class SubjectListController extends AbstractContentElementController
     protected function getResponse(Template $template, ContentModel $model, Request $request): Response
     {
 
+
         return $template->getResponse();
     }
 
