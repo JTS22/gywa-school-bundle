@@ -31,10 +31,10 @@
             <trans-unit id="tl_teacher.delete.1">
                 <source>Delete teacher ID %s</source>
             </trans-unit>
-            <trans-unit id="tl_teacher.lastName">
+            <trans-unit id="tl_teacher.lastName.0">
                 <source>Last name</source>
             </trans-unit>
-            <trans-unit id="tl_teacher.firstName">
+            <trans-unit id="tl_teacher.firstName.0">
                 <source>First name</source>
             </trans-unit>
             <trans-unit id="tl_teacher.prefix.0">

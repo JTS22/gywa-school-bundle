@@ -58,6 +58,9 @@
             <trans-unit id="tl_subject.title_legend">
                 <source>Subject properties</source>
             </trans-unit>
+            <trans-unit id="tl_subject.abbreviationNotGenerated">
+                <source>Abbreviation could not be automatically generated. Please provide one yourself.</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

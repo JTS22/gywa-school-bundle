@@ -4,19 +4,27 @@
         <body>
             <trans-unit id="MOD.gywa_subjects.0">
                 <source>Subjects</source>
-                <target></target>
+                <target>Schulfächer</target>
             </trans-unit>
             <trans-unit id="MOD.gywa_subjects.1">
                 <source>Manage school subjects</source>
-                <target></target>
+                <target>Schulfächer verwalten</target>
+            </trans-unit>
+            <trans-unit id="MOD.gywa_categories.0">
+                <source>Categories</source>
+                <target>Kategorien</target>
+            </trans-unit>
+            <trans-unit id="MOD.gywa_categories.1">
+                <source>Manage subject categories</source>
+                <target>Fächerkategorien verwalten</target>
             </trans-unit>
             <trans-unit id="MOD.gywa_teachers.0">
                 <source>Teachers</source>
-                <target></target>
+                <target>Lehrer</target>
             </trans-unit>
             <trans-unit id="MOD.gywa_teachers.1">
                 <source>Manage school teachers</source>
-                <target></target>
+                <target>Lehrer verwalten</target>
             </trans-unit>
         </body>
     </file>

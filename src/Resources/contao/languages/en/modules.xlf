@@ -8,6 +8,12 @@
             <trans-unit id="MOD.gywa_subjects.1">
                 <source>Manage school subjects</source>
             </trans-unit>
+            <trans-unit id="MOD.gywa_categories.0">
+                <source>Categories</source>
+            </trans-unit>
+            <trans-unit id="MOD.gywa_categories.1">
+                <source>Manage subject categories</source>
+            </trans-unit>
             <trans-unit id="MOD.gywa_teachers.0">
                 <source>Teachers</source>
             </trans-unit>

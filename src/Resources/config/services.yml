@@ -1,3 +1,10 @@
 services:
-
-
+    gywaschoolbundle.subjectManager:
+        class: GyWa\SchoolBundle\SubjectManager
+        arguments:
+          - "@database_connection"
+          - "@monolog.logger"
+    gywaschoolbundle.contentelement.subjectlist:
+        class: Gywa\SchoolBundle\Controller\ContentElement\ContentSubjectListController
+        tags:
+          - { name: contao.content_element, category: gywa_school }

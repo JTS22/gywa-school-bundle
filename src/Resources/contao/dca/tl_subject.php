@@ -94,7 +94,6 @@ $GLOBALS['TL_DCA']['tl_subject'] = array
         (
             'label' => &$GLOBALS['TL_LANG']['tl_subject']['title'],
             'inputType' => 'text',
-            'exclude' => true,
             'sorting' => true,
             'flag' => 1,
             'search' => true,
@@ -109,7 +108,6 @@ $GLOBALS['TL_DCA']['tl_subject'] = array
         'cssClass' => array(
             'label' => &$GLOBALS['TL_LANG']['tl_subject']['cssClass'],
             'inputType' => 'text',
-            'search' => true,
             'eval' => array('maxlenght' => 64, 'tl_class' => 'w50'),
             'sql' => "varchar(64) NOT NULL default ''"
         ),
@@ -117,8 +115,9 @@ $GLOBALS['TL_DCA']['tl_subject'] = array
             'label' => &$GLOBALS['TL_LANG']['tl_subject']['abbreviation'],
             'exclude' => true,
             'inputType' => 'text',
-            'serach' => true,
-            'eval' => array('mandatory' => true, 'maxlenght' => 6, 'tl_class' => 'w50', 'unique' => true),
+            'search' => true,
+            'eval' => array('maxlenght' => 6, 'tl_class' => 'w50', 'unique' => true),
+            'save_callback' => array(array('gywaschoolbundle.subjectManager', 'onSubjectAbbrSaved')),
             'sql' => "varchar(6) NOT NULL default ''"
         ),
         'referencePage' => array(

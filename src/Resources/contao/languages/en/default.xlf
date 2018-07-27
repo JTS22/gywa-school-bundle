@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2">
+    <file datatype="php" original="src/Resources/contao/languages/en/modules.php" source-language="en">
+        <body>
+            <trans-unit id="CTE.gywa_school.0">
+                <source>GyWa SchoolBundle</source>
+            </trans-unit>
+            <trans-unit id="CTE.gywa_subjects.1">
+                <source>All elements contained within the GyWa SchoolBundle</source>
+            </trans-unit>
+            <trans-unit id="CTE.content_subject_list.0">
+                <source>Subject list</source>
+            </trans-unit>
+            <trans-unit id="CTE.content_subject_list.1">
+                <source>A list of all subjects, optionally sorted by category</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
+

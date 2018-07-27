@@ -3,79 +3,83 @@
         <body>
             <trans-unit id="tl_subject.new.0">
                 <source>New subject</source>
-                <target></target>
+                <target>Neues Fach</target>
             </trans-unit>
             <trans-unit id="tl_subject.new.1">
                 <source>Create a new subject</source>
-                <target></target>
+                <target>Neues Fach erstellen</target>
             </trans-unit>
             <trans-unit id="tl_subject.show.0">
                 <source>Subject details</source>
-                <target></target>
+                <target>Details</target>
             </trans-unit>
             <trans-unit id="tl_subject.show.1">
                 <source>Show the details of subject ID %s</source>
-                <target></target>
+                <target>Zeige Details zum Fach mit ID %s</target>
             </trans-unit>
             <trans-unit id="tl_subject.edit.0">
                 <source>Edit subject</source>
-                <target></target>
+                <target>Fach bearbeiten</target>
             </trans-unit>
             <trans-unit id="tl_subject.edit.1">
                 <source>Edit subject ID %s</source>
-                <target></target>
+                <target>Fach mit ID %s bearbeiten</target>
             </trans-unit>
             <trans-unit id="tl_subject.copy.0">
                 <source>Duplicate subject</source>
-                <target></target>
+                <target>Fach duplizieren</target>
             </trans-unit>
             <trans-unit id="tl_subject.copy.1">
                 <source>Duplicate subject ID %s</source>
-                <target></target>
+                <target>Fach mit ID %s duplizieren</target>
             </trans-unit>
             <trans-unit id="tl_subject.delete.0">
                 <source>Delete subject</source>
-                <target></target>
+                <target>Fach löschen</target>
             </trans-unit>
             <trans-unit id="tl_subject.delete.1">
                 <source>Delete subject ID %s</source>
-                <target></target>
+                <target>Fach mit ID %s löschen</target>
             </trans-unit>
             <trans-unit id="tl_subject.title.0">
                 <source>Title</source>
-                <target></target>
+                <target>Titel</target>
             </trans-unit>
             <trans-unit id="tl_subject.title.1">
                 <source>The subject's name</source>
-                <target></target>
+                <target>Der Name des Faches</target>
             </trans-unit>
             <trans-unit id="tl_subject.cssClass.0">
                 <source>CSS Class</source>
-                <target></target>
+                <target>CSS-Klasse</target>
             </trans-unit>
             <trans-unit id="tl_subject.cssClass.1">
                 <source>One or more css-classes added to all elements describing this subject</source>
-                <target></target>
+                <target>Eine oder mehrere CSS-Klassen, die allen Elementen hinzugefügt werden, die dieses Fach referenzieren</target>
             </trans-unit>
             <trans-unit id="tl_subject.abbreviation.0">
                 <source>Abbreviation</source>
-                <target></target>
+                <target>Abkürzung</target>
             </trans-unit>
             <trans-unit id="tl_subject.abbreviation.1">
                 <source>One to six letters used to abbreviate the subject</source>
-                <target></target>
+                <target>Eine Abkürzung für das Fach, ein bis sechs Buchstaben lang</target>
             </trans-unit>
             <trans-unit id="tl_subject.referencePage.0">
                 <source>Subject Page</source>
-                <target></target>
+                <target>Fächerseite</target>
             </trans-unit>
             <trans-unit id="tl_subject.referencePage.1">
                 <source>A page with more information on the given subject</source>
-                <target></target>
+                <target>Eine Seite mit weiteren Informationen zu diesem Fach</target>
             </trans-unit>
             <trans-unit id="tl_subject.title_legend">
                 <source>Subject properties</source>
-                <target></target>
+                <target>Fächereigenschaften</target>
+            </trans-unit>
+            <trans-unit id="tl_subject.abbreviationNotGenerated">
+                <source>Abbreviation could not be automatically generated. Please provide one yourself.</source>
+                <target>Fächerkürzel konnte nicht automatisch erzeugt werden. Bitte vergeben Sie selbst ein geeignetes Kürzel.</target>
             </trans-unit>
         </body>
     </file>

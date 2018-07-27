@@ -5,7 +5,6 @@
  */
 $GLOBALS['TL_DCA']['tl_teacher'] = array
 (
-
     // Config
     'config' => array
     (
@@ -31,8 +30,8 @@ $GLOBALS['TL_DCA']['tl_teacher'] = array
         ),
         'label' => array
         (
-            'fields' => array('lastName', 'firstName'),
-            'format' => '%s, %s',
+            'fields' => array('lastName', 'prefix', 'firstName', 'abbreviation'),
+            'format' => '%s, %s %s (%s)',
         ),
         'global_operations' => array
         (
@@ -94,7 +93,6 @@ $GLOBALS['TL_DCA']['tl_teacher'] = array
         (
             'label' => &$GLOBALS['TL_LANG']['tl_teacher']['lastName'],
             'inputType' => 'text',
-            'exclude' => true,
             'sorting' => true,
             'flag' => 1,
             'search' => true,
@@ -109,7 +107,6 @@ $GLOBALS['TL_DCA']['tl_teacher'] = array
         (
             'label' => &$GLOBALS['TL_LANG']['tl_teacher']['firstName'],
             'inputType' => 'text',
-            'exclude' => true,
             'sorting' => true,
             'flag' => 1,
             'search' => true,
@@ -125,28 +122,28 @@ $GLOBALS['TL_DCA']['tl_teacher'] = array
             'label' => &$GLOBALS['TL_LANG']['tl_teacher']['prefix'],
             'inputType' => 'text',
             'eval' => array(
-                'maxlength' => 6,
-                'tl_class' => 'w50'
+                'maxlength' => 20,
+                'tl_class' => 'w50',
             ),
-            'sql' => "varchar(6) NOT NULL default ''"
+            'sql' => "varchar(20) default ''"
         ),
         'abbreviation' => array
         (
             'label' => &$GLOBALS['TL_LANG']['tl_teacher']['abbreviation'],
             'inputType' => 'text',
             'exclude' => true,
+            'search' => true,
             'eval' => array(
                 'mandatory' => true,
                 'unique' => true,
                 'maxlength' => 4,
                 'tl_class' => 'w50'
             ),
-            'sql' => "varchar(4) NOT NULL default ''"
+            'sql' => "varchar(4) BINARY NULL"
         ),
         'cssClass' => array(
             'label' => &$GLOBALS['TL_LANG']['tl_teacher']['cssClass'],
             'inputType' => 'text',
-            'search' => true,
             'eval' => array('maxlenght' => 64, 'tl_class' => 'w50'),
             'sql' => "varchar(64) NOT NULL default ''"
         ),
@@ -158,7 +155,7 @@ $GLOBALS['TL_DCA']['tl_teacher'] = array
             'eval' => array('filesOnly' => true, 'fieldType' => 'radio', 'tl_class' => 'clr', 'extensions' => Config::get('validImageTypes')),
             'sql' => "binary(16) NULL"
         ),
-        'subjects' => array (
+        'subjects' => array(
             'label' => &$GLOBALS['TL_LANG']['tl_teacher']['subjects'],
             'exclude' => true,
             'filter' => true,
@@ -170,5 +167,6 @@ $GLOBALS['TL_DCA']['tl_teacher'] = array
         ),
     )
 );
+
 
 ?>

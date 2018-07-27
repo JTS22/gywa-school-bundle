@@ -3,99 +3,99 @@
         <body>
             <trans-unit id="tl_teacher.new.0">
                 <source>New teacher</source>
-                <target></target>
+                <target>Neuer Lehrer</target>
             </trans-unit>
             <trans-unit id="tl_teacher.new.1">
                 <source>Add a new teacher</source>
-                <target></target>
+                <target>Einen neuen Lehrer eintragen</target>
             </trans-unit>
             <trans-unit id="tl_teacher.show.0">
                 <source>Teacher details</source>
-                <target></target>
+                <target>Details</target>
             </trans-unit>
             <trans-unit id="tl_teacher.show.1">
                 <source>Show the details of teacher ID %s</source>
-                <target></target>
+                <target>Details zum Lehrer mit der ID %s anzeigen</target>
             </trans-unit>
             <trans-unit id="tl_teacher.edit.0">
                 <source>Edit teacher</source>
-                <target></target>
+                <target>Lehrer bearbeiten</target>
             </trans-unit>
             <trans-unit id="tl_teacher.edit.1">
                 <source>Edit teacher ID %s</source>
-                <target></target>
+                <target>Den Lehrer mit der ID %s bearbeiten</target>
             </trans-unit>
             <trans-unit id="tl_teacher.copy.0">
                 <source>Duplicate teacher</source>
-                <target></target>
+                <target>Lehrer duplizieren</target>
             </trans-unit>
             <trans-unit id="tl_teacher.copy.1">
                 <source>Duplicate teacher ID %s</source>
-                <target></target>
+                <target>Den Lehrer mit der ID %s duplizieren</target>
             </trans-unit>
             <trans-unit id="tl_teacher.delete.0">
                 <source>Delete teacher</source>
-                <target></target>
+                <target>Lehrer löschen</target>
             </trans-unit>
             <trans-unit id="tl_teacher.delete.1">
                 <source>Delete teacher ID %s</source>
-                <target></target>
+                <target>Den Lehrer mit der ID %s löschen</target>
             </trans-unit>
-            <trans-unit id="tl_teacher.lastName">
+            <trans-unit id="tl_teacher.lastName.0">
                 <source>Last name</source>
-                <target></target>
+                <target>Nachname</target>
             </trans-unit>
-            <trans-unit id="tl_teacher.firstName">
+            <trans-unit id="tl_teacher.firstName.0">
                 <source>First name</source>
-                <target></target>
+                <target>Vorname</target>
             </trans-unit>
             <trans-unit id="tl_teacher.prefix.0">
                 <source>Name prefix</source>
-                <target></target>
+                <target>Namenspräfix</target>
             </trans-unit>
             <trans-unit id="tl_teacher.prefix.1">
                 <source>Any prefixes like Dr.</source>
-                <target></target>
+                <target>Alle Präfixe wie zum Beispiel Dr.</target>
             </trans-unit>
             <trans-unit id="tl_teacher.abbreviation.0">
                 <source>Abbreviation</source>
-                <target></target>
+                <target>Kürzel</target>
             </trans-unit>
             <trans-unit id="tl_teacher.abbreviation.1">
                 <source>One to four letters used to abbreviate the teacher's name</source>
-                <target></target>
+                <target>Das Kürzel des Lehrers, ein bis vier Buchstaben lang</target>
             </trans-unit>
             <trans-unit id="tl_teacher.cssClass.0">
                 <source>CSS Class</source>
-                <target></target>
+                <target>CSS-Klasse</target>
             </trans-unit>
             <trans-unit id="tl_teacher.cssClass.1">
                 <source>One or more css-classes added to all elements related to this teacher</source>
-                <target></target>
+                <target>Eine oder mehrere CSS-Klassen, die allen Elementen hinzugefügt werden, die diesen Lehrer referenzieren.</target>
             </trans-unit>
             <trans-unit id="tl_teacher.image.0">
                 <source>Picture</source>
-                <target></target>
+                <target>Foto</target>
             </trans-unit>
             <trans-unit id="tl_teacher.image.1">
                 <source>A picture shown in the teacher list element</source>
-                <target></target>
+                <target>Ein Foto, dass in der Liste aller Lehrer angezeigt wird</target>
             </trans-unit>
             <trans-unit id="tl_teacher.subjects.0">
                 <source>Subjects</source>
-                <target></target>
+                <target>Fächer</target>
             </trans-unit>
             <trans-unit id="tl_teacher.subjects.1">
                 <source>All subjects taught by this teacher</source>
-                <target></target>
+                <target>Alle Fächer, die dieser Lehrer unterrichtet</target>
             </trans-unit>
             <trans-unit id="tl_teacher.title_legend">
                 <source>Name</source>
-                <target></target>
+                <target>Name</target>
             </trans-unit>
             <trans-unit id="tl_teacher.subjects_legend">
                 <source>Subjects</source>
-                <target></target>
+                <target>Fächer</target>
             </trans-unit>
         </body>
     </file>
