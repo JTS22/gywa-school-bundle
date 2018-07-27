@@ -1,0 +1,10 @@
+<div id="category-toggler">
+    <ul>
+        <li><a class="active">Alle</a></li>
+        <?php foreach($this->arrData['categoryList'] as $category): ?>
+            <li>
+                <a href="{{}}"></a>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+</div>

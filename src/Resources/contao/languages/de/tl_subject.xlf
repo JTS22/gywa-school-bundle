@@ -65,6 +65,14 @@
                 <source>One to six letters used to abbreviate the subject</source>
                 <target>Eine Abkürzung für das Fach, ein bis sechs Buchstaben lang</target>
             </trans-unit>
+            <trans-unit id="tl_subject.category.0">
+                <source>Category</source>
+                <target>Kategorie</target>
+            </trans-unit>
+            <trans-unit id="tl_subject.category.1">
+                <source>The subject category this subject belongs to</source>
+                <target>Die Kategorie, der dieses Fach angehört</target>
+            </trans-unit>
             <trans-unit id="tl_subject.referencePage.0">
                 <source>Subject Page</source>
                 <target>Fächerseite</target>

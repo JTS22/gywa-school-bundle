@@ -4,8 +4,11 @@ services:
         arguments:
           - "@database_connection"
           - "@monolog.logger"
+
     gywaschoolbundle.contentelement.subjectlist:
         class: GyWa\SchoolBundle\Controller\ContentElement\SubjectListController
+        arguments:
+          - "@database_connection"
         tags:
           - { name: contao.content_element, category: gywa_school }
         public: true

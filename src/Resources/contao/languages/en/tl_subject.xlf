@@ -49,6 +49,12 @@
             <trans-unit id="tl_subject.abbreviation.1">
                 <source>One to six letters used to abbreviate the subject</source>
             </trans-unit>
+            <trans-unit id="tl_subject.category.0">
+                <source>Category</source>
+            </trans-unit>
+            <trans-unit id="tl_subject.category.1">
+                <source>The subject category this subject belongs to</source>
+            </trans-unit>
             <trans-unit id="tl_subject.referencePage.0">
                 <source>Subject Page</source>
             </trans-unit>

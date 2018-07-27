@@ -1,6 +1,30 @@
-<?php
+<div class="<?= $this->class ?> block">
+    <?php if ($this->headline): ?>
+        <<?= $this->hl; ?>><?= $this->headline; ?></<?= $this->hl; ?>>
+    <?php endif; ?>
 
-    echo $this->headline;
-    echo $this->dumpTemplateVars();
+    <?= $this->togglerCode ?>
 
-    ?>
+
+    <div class="tile-layout fully-clickable">
+
+        <?php foreach ($this->arrProperties as $key => $value): ?>
+            <div id="<?= $key ?>" class="category">
+
+                <h2> <?= $value["displayName"] ?> </h2>
+
+                <ul <?php if ($value['cssClass']): ?> class="<?= $value['cssClass'] ?>"<?php endif; ?>>
+                    <?php foreach ($value["items"] as $subject): ?>
+                        <li class="subject-color-<?= $subject['abbreviation'] ?> <?= $subject['css'] ?>">
+                            <a title="<?= $subject['title'] ?>"
+                               href="{{link_url::<?= $subject['page'] ?>}}"> <?= $subject['title'] ?></a>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+
+            </div>
+        <?php endforeach; ?>
+
+    </div>
+
+</div>
