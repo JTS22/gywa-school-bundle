@@ -1,9 +1,15 @@
+<?php
+/* JavaScript for the frontend-output */
+$GLOBALS['TL_JAVASCRIPT'][] = 'bundles/gywaschool/css/gywa_category_toggler.js';
+?>
+
+
 <div id="category-toggler">
     <ul>
-        <li><a class="active">Alle</a></li>
-        <?php foreach($this->arrData['categoryList'] as $category): ?>
+        <li><a class="active" href="{{link_url::{{page::id}}}}"><?= $this->allName ?></a></li>
+        <?php foreach($this->categoryList as $category): ?>
             <li>
-                <a href="{{}}"></a>
+                <a href="{{link_url::{{page::id}}}}#<?= $category['alias'] ?>" title="<?= $category['title'] ?>"><?= $category['title'] ?></a>
             </li>
         <?php endforeach; ?>
     </ul>

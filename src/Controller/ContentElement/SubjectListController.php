@@ -44,7 +44,7 @@ class SubjectListController extends AbstractContentElementController
                 ));
             }
 
-            $categoryName = str_replace(["ä", "ö", "ü", "_", " "], ["ae", "oe", "ue", "-", "-"], mb_strtolower($category['title']));
+            $categoryName = str_replace(["ä", "ö", "ü", "_", " ", "/", ","], ["ae", "oe", "ue", "-", "-", "-", "-"], mb_strtolower($category['title']));
 
             $arrProperties[$categoryName] = array(
                 // TODO extract into method/service
@@ -53,13 +53,13 @@ class SubjectListController extends AbstractContentElementController
                 'items' => $allSubjects
             );
 
-            array_push($allCategories, $categoryName);
+            array_push($allCategories, array('title' => $category['title'], 'alias' => $categoryName));
         }
 
         $template->arrProperties = $arrProperties;
 
         $togglerTemplate = new FrontendTemplate('ce_category_toggler');
-        $togglerTemplate->setData(array('categoryList' => $allCategories));
+        $togglerTemplate->setData(array('categoryList' => $allCategories, 'allName' => sprintf($GLOBALS['TL_LANG']['MSC']['gywa_category']['all'])));
 
         $template->togglerCode = $togglerTemplate->parse();
 
