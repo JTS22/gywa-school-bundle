@@ -7,6 +7,7 @@ use Contao\CoreBundle\Controller\ContentElement\AbstractContentElementController
 use Contao\FrontendTemplate;
 use Contao\Template;
 use Doctrine\DBAL\Connection;
+use Doctrine\DBAL\FetchMode;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -30,8 +31,13 @@ class SubjectListController extends AbstractContentElementController
         $arrProperties = array();
         $allCategories = array();
 
-        while ($category = $categoryStatement->fetch()) {
-            $subjectStatement->execute(array($category['id']));
+        $allowedCategories = unserialize($model->gywa_category_filter);
+
+
+        while ($category = $categoryStatement->fetch(FetchMode::STANDARD_OBJECT)) {
+            if (!in_array($category->id, $allowedCategories)) continue;
+
+            $subjectStatement->execute(array($category->id));
 
             $allSubjects = array();
 
@@ -44,16 +50,16 @@ class SubjectListController extends AbstractContentElementController
                 ));
             }
 
-            $categoryName = str_replace(["ä", "ö", "ü", "_", " ", "/", ","], ["ae", "oe", "ue", "-", "-", "-", "-"], mb_strtolower($category['title']));
+            $categoryName = str_replace(["ä", "ö", "ü", "_", " ", "/", ","], ["ae", "oe", "ue", "-", "-", "-", "-"], mb_strtolower($category->title));
 
             $arrProperties[$categoryName] = array(
                 // TODO extract into method/service
-                'displayName' => $category['title'],
-                'cssClass' => $category['cssClass'],
+                'displayName' => $category->title,
+                'cssClass' => $category->cssClass,
                 'items' => $allSubjects
             );
 
-            array_push($allCategories, array('title' => $category['title'], 'alias' => $categoryName));
+            array_push($allCategories, array('title' => $category->title, 'alias' => $categoryName));
         }
 
         $template->arrProperties = $arrProperties;

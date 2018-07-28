@@ -1,7 +1,7 @@
 <?php
 
 $GLOBALS['TL_DCA']['tl_content']['palettes']['subject_list'] =
-    '{type_legend},type,headline;{subject_legend}gywa_display_category_toggler,gywa_category_filter;{template_legend:hide},customTpl;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space;{invisible_legend:hide},invisible,start,stop';
+    '{type_legend},type,headline;{subject_legend},gywa_category_filter,gywa_display_category_toggler;{template_legend:hide},customTpl;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space;{invisible_legend:hide},invisible,start,stop';
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['gywa_display_category_toggler'] = array(
     'label' => $GLOBALS['TL_LANG']['tl_content']['gywa_display_category_toggler'],

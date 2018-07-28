@@ -3,7 +3,9 @@
         <<?= $this->hl; ?>><?= $this->headline; ?></<?= $this->hl; ?>>
     <?php endif; ?>
 
-    <?= $this->togglerCode ?>
+    <?php if($this->gywa_display_category_toggler): ?>
+        <?= $this->togglerCode ?>
+    <?php endif; ?>
 
 
     <div class="tile-layout fully-clickable">

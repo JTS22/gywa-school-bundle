@@ -1,0 +1,26 @@
+<?xml version="1.0" ?><xliff version="1.2">
+    <file datatype="php" original="src/Resources/contao/languages/en/tl_content.php" source-language="en">
+        <body>
+            <trans-unit id="tl_content.subject_legend">
+                <source>Subjects and categories</source>
+                <target>Fächer und Kategorien</target>
+            </trans-unit>
+            <trans-unit id="tl_content.gywa_category_filter.0">
+                <source>Filter list by category</source>
+                <target>Kategorienliste filtern</target>
+            </trans-unit>
+            <trans-unit id="tl_content.gywa_category_filter.1">
+                <source>Only the selected categories with their respective subjects will appear in the list</source>
+                <target>Nur die ausgewählten Kategorien werden mit ihren Fächern in der Liste erscheinen</target>
+            </trans-unit>
+            <trans-unit id="tl_content.gywa_display_category_toggler.0">
+                <source>Display category toggler</source>
+                <target>Zeige Kategoriewechsler</target>
+            </trans-unit>
+            <trans-unit id="tl_content.gywa_display_category_toggler.1">
+                <source>Include a widget to toggle between the various categories</source>
+                <target>Zeige eine Liste von Buttons, die es ermöglicht, zwischen den Kategorien zu wechseln</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
