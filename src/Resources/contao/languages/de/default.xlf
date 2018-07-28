@@ -22,6 +22,18 @@
                 <source>All</source>
                 <target>Alle</target>
             </trans-unit>
+            <trans-unit id="MSC.gywa_teacher.abbreviation">
+                <source>Abbreviation</source>
+                <target>Kürzel</target>
+            </trans-unit>
+            <trans-unit id="MSC.gywa_teacher.email">
+                <source>Email adress</source>
+                <target>E-Mail-Adresse</target>
+            </trans-unit>
+            <trans-unit id="MSC.gywa_teacher.explanation">
+                <source>Click on a teacher card for more details.</source>
+                <target>Für Details auf die Lehrer klicken.</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

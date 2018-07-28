@@ -23,6 +23,9 @@
             <trans-unit id="MSC.gywa_teacher.email">
                 <source>Email adress</source>
             </trans-unit>
+            <trans-unit id="MSC.gywa_teacher.explanation">
+                <source>Click on a teacher card for more details.</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>
