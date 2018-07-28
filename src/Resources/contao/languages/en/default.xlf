@@ -17,6 +17,12 @@
             <trans-unit id="MSC.gywa_category.all">
                 <source>All</source>
             </trans-unit>
+            <trans-unit id="MSC.gywa_teacher.abbreviation">
+                <source>Abbreviation</source>
+            </trans-unit>
+            <trans-unit id="MSC.gywa_teacher.email">
+                <source>Email adress</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

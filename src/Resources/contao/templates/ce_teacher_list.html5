@@ -1,0 +1,44 @@
+<div class="<?= $this->class ?> block">
+    <?php if ($this->headline): ?>
+    <<?= $this->hl ?>><?= $this->headline ?></<?= $this->hl ?>>
+<?php endif; ?>
+
+<?= $this->togglerCode ?>
+
+<p><?= $this->lang['explanation'] ?></p>
+
+<div class="tile-layout checkerboard folding-details">
+    <?php foreach ($this->categories as $escaped => $displayName): ?>
+        <div id="<?= $escaped ?>" class="category">'.
+            <h2><?= $displayName ?></h2>
+            <?php foreach ($this->teachers as $value): ?>
+                <li>
+                    <img src="{{file::<?= $value['imgURL'] ?>}}">
+                    <div>
+                        <p><?= $value['name'] ?></p>
+                        <div class="subjects">
+                            <?php foreach ($value['subjects'] as $subject_abbr_escaped): ?>
+                                <a href="{{link_url::<?= $this->subjects[$subject_abbr_escaped]['referencePage'] ?>}}"
+                                   class="subject-color-<?= $subject_abbr_escaped ?>"
+                                   title="<?= $this->subjects[$subject_abbr_escaped]['title'] ?>"><?= $this->subjects[$subject_abbr_escaped]['title'] ?></a>
+                            <?php endforeach; ?>
+                        </div>
+                        <div class="details">
+                            <p>
+                                <img src="bundles/gywaschool/img/icon-signature.svg" title="<?= $this->lang['abbreviation'] ?>" alt="<?= $this->lang['abbreviation'] ?>">
+                                <?= $value['abbreviation'] ?>
+                            </p>
+                            <p>
+                                <a href="mailto:<?= $value['emailAddress'] ?>"<?php if ($value['hasEmailExtension']) echo ' class="collapse-extension"'; ?>>
+                                    <img src="bundles/gywaschool/img/icon-email-address.svg" title="<?= $this->lang['email'] ?>"
+                                         alt="<?= $this->lang['email'] ?>">
+                                    <?= $value['emailAddress'] . ($value['hasEmailExtension'] ? '@' . $this->emailDomain : '@...') ?>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+            <?php endforeach; ?>
+        </div>
+    <?php endforeach; ?>
+</div>

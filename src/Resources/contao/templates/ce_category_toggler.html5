@@ -1,6 +1,6 @@
 <?php
 /* JavaScript for the frontend-output */
-$GLOBALS['TL_JAVASCRIPT'][] = 'bundles/gywaschool/css/gywa_category_toggler.js';
+$GLOBALS['TL_JAVASCRIPT'][] = 'bundles/gywaschool/js/gywa_category_toggler.js';
 ?>
 
 
