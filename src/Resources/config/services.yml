@@ -5,6 +5,13 @@ services:
           - "@database_connection"
           - "@monolog.logger"
 
+    gywaschoolbundle.categoryManager:
+        class: GyWa\SchoolBundle\CategoryManager
+        arguments:
+          - "@database_connection"
+          - "@monolog.logger"
+        public: true
+
     gywaschoolbundle.contentelement.subjectlist:
         class: GyWa\SchoolBundle\Controller\ContentElement\SubjectListController
         arguments:

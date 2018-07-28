@@ -5,7 +5,7 @@
             <trans-unit id="CTE.gywa_school.0">
                 <source>GyWa SchoolBundle</source>
             </trans-unit>
-            <trans-unit id="CTE.gywa_subjects.1">
+            <trans-unit id="CTE.gywa_school.1">
                 <source>All elements contained within the GyWa SchoolBundle</source>
             </trans-unit>
             <trans-unit id="CTE.subject_list.0">
