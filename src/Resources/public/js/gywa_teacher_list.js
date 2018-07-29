@@ -21,7 +21,7 @@ $(document).ready(function() {
 	$(".tile-layout.folding-details ul li").click(function(e) {
 		if($(e.target).prop("tagName") != "A") $(this).toggleClass("expanded"); // don't fold when link is clicked
 		
-		var el = $(".ce_teacher_list .subjects a");
+		var el = $(".ce_teacher_list .details a");
 		var href = el.attr("href");
 		
 		if(href.indexOf("@") === -1) { // email address has not yet been substituted
