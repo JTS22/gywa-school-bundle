@@ -4,6 +4,7 @@ services:
         arguments:
           - "@database_connection"
           - "@monolog.logger"
+        public: true
 
     gywaschoolbundle.categoryManager:
         class: GyWa\SchoolBundle\CategoryManager
