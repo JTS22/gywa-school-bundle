@@ -20,3 +20,11 @@ services:
         tags:
           - { name: contao.content_element, category: gywa_school }
         public: true
+
+    gywaschoolbundle.contentelement.teacherlist:
+        class: GyWa\SchoolBundle\Controller\ContentElement\TeacherListController
+        arguments:
+          - "@database_connection"
+        tags:
+          - { name: contao.content_element, category: gywa_school }
+        public: true

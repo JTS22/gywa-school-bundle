@@ -3,7 +3,7 @@
         <<?= $this->hl; ?>><?= $this->headline; ?></<?= $this->hl; ?>>
     <?php endif; ?>
 
-    <?php if($this->gywa_display_category_toggler): ?>
+    <?php if($this->gywaDisplayCategoryToggler): ?>
         <?= $this->togglerCode ?>
     <?php endif; ?>
 
@@ -11,7 +11,7 @@
     <div class="tile-layout fully-clickable">
 
         <?php foreach ($this->arrProperties as $key => $value): ?>
-            <div id="<?= $key ?>" class="category">
+            <div id="<?= $key ?>" class="category <?= $value['cssClass'] ?>">
 
                 <h2> <?= $value["displayName"] ?> </h2>
 

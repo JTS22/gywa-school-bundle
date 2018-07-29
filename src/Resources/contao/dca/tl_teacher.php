@@ -76,7 +76,7 @@ $GLOBALS['TL_DCA']['tl_teacher'] = array
     // Palettes
     'palettes' => array
     (
-        'default' => '{title_legend},firstName,lastName,prefix,abbreviation,cssClass,image,{subjects_legend},subjects'
+        'default' => '{title_legend},firstName,lastName,prefix,abbreviation,cssClass,category,image,{subjects_legend},subjects'
     ),
     // Fields
     'fields' => array
@@ -165,6 +165,14 @@ $GLOBALS['TL_DCA']['tl_teacher'] = array
             'sql' => "blob NULL",
             'relation' => array('type' => 'belongsToMany', 'load' => 'lazy')
         ),
+        'category' => array(
+            'label' => $GLOBALS['TL_LANG']['tl_teacher']['category'],
+            'inputType' => 'select',
+            'foreignKey' => 'tl_teacher_category.title',
+            'eval' => array('mandatory' => true, 'chosen' => true, 'tl_class' => 'w50'),
+            'relation' => array('type' => 'hasOne', 'load' => 'lazy'),
+            'sql' => "int(10) unsigned NOT NULL default '0'"
+        )
     )
 );
 

@@ -2,63 +2,63 @@
 <xliff version="1.2">
     <file datatype="php" original="src/Resources/contao/languages/en/tl_subject.php" source-language="en" target-language="de">
         <body>
-            <trans-unit id="tl_category.new.0">
+            <trans-unit id="tl_teacher_category.new.0">
                 <source>New category</source>
-                <target>Neue Kategorie</target>
+                <target>Neue Rolle</target>
             </trans-unit>
-            <trans-unit id="tl_category.new.1">
+            <trans-unit id="tl_teacher_category.new.1">
                 <source>Add a new category</source>
-                <target>Neue Kategorie erstellen</target>
+                <target>Neue Rolle erstellen</target>
             </trans-unit>
-            <trans-unit id="tl_category.show.0">
+            <trans-unit id="tl_teacher_category.show.0">
                 <source>Category details</source>
                 <target>Details</target>
             </trans-unit>
-            <trans-unit id="tl_category.show.1">
+            <trans-unit id="tl_teacher_category.show.1">
                 <source>Show the details of category ID %s</source>
-                <target>Details zur Kategorie mit der ID %s anzeigen</target>
+                <target>Details zur Rolle mit der ID %s anzeigen</target>
             </trans-unit>
-            <trans-unit id="tl_category.edit.0">
+            <trans-unit id="tl_teacher_category.edit.0">
                 <source>Edit category</source>
-                <target>Kategorie bearbeiten</target>
+                <target>Rolle bearbeiten</target>
             </trans-unit>
-            <trans-unit id="tl_category.edit.1">
+            <trans-unit id="tl_teacher_category.edit.1">
                 <source>Edit category ID %s</source>
-                <target>Kategorie mit der ID %s bearbeiten</target>
+                <target>Rolle mit der ID %s bearbeiten</target>
             </trans-unit>
-            <trans-unit id="tl_category.copy.0">
+            <trans-unit id="tl_teacher_category.copy.0">
                 <source>Duplicate category</source>
-                <target>Kategorie duplizieren</target>
+                <target>Rolle duplizieren</target>
             </trans-unit>
-            <trans-unit id="tl_category.copy.1">
+            <trans-unit id="tl_teacher_category.copy.1">
                 <source>Duplicate category ID %s</source>
-                <target>Kategorie mit ID %s duplizieren</target>
+                <target>Rolle mit ID %s duplizieren</target>
             </trans-unit>
-            <trans-unit id="tl_category.delete.0">
+            <trans-unit id="tl_teacher_category.delete.0">
                 <source>Delete category</source>
-                <target>Kategorie löschen</target>
+                <target>Rolle löschen</target>
             </trans-unit>
-            <trans-unit id="tl_category.delete.1">
+            <trans-unit id="tl_teacher_category.delete.1">
                 <source>Delete category ID %s</source>
-                <target>Kategorie mit ID %s löschen</target>
+                <target>Rolle mit ID %s löschen</target>
             </trans-unit>
-            <trans-unit id="tl_category.title.0">
+            <trans-unit id="tl_teacher_category.title.0">
                 <source>Title</source>
                 <target>Titel</target>
             </trans-unit>
-            <trans-unit id="tl_category.title.1">
+            <trans-unit id="tl_teacher_category.title.1">
                 <source>The categorie's name</source>
-                <target>Der Name der Kategorie</target>
+                <target>Der Name der Rolle</target>
             </trans-unit>
-            <trans-unit id="tl_category.cssClass.0">
+            <trans-unit id="tl_teacher_category.cssClass.0">
                 <source>CSS-Class</source>
                 <target>CSS-Klasse</target>
             </trans-unit>
-            <trans-unit id="tl_category.cssClass.1">
+            <trans-unit id="tl_teacher_category.cssClass.1">
                 <source>One or more css-classes that get added to the root ul-tag referencing this category.</source>
-                <target>Eine oder mehrere CSS-Klassen, die dem dieser Kategorie zugehörigen ul-Tag zugewiesen werden</target>
+                <target>Eine oder mehrere CSS-Klassen, die dem dieser Rolle zugehörigen ul-Tag zugewiesen werden</target>
             </trans-unit>
-            <trans-unit id="tl_category.title_legend">
+            <trans-unit id="tl_teacher_category.title_legend">
                 <source>Title</source>
                 <target>Titel</target>
             </trans-unit>

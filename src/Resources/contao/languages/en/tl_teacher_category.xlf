@@ -1,49 +1,49 @@
 <?xml version="1.0" ?><xliff version="1.2">
     <file datatype="php" original="src/Resources/contao/languages/en/tl_subject.php" source-language="en">
         <body>
-            <trans-unit id="tl_category.new.0">
+            <trans-unit id="tl_teacher_category.new.0">
                 <source>New category</source>
             </trans-unit>
-            <trans-unit id="tl_category.new.1">
+            <trans-unit id="tl_teacher_category.new.1">
                 <source>Add a new category</source>
             </trans-unit>
-            <trans-unit id="tl_category.show.0">
+            <trans-unit id="tl_teacher_category.show.0">
                 <source>Category details</source>
             </trans-unit>
-            <trans-unit id="tl_category.show.1">
+            <trans-unit id="tl_teacher_category.show.1">
                 <source>Show the details of category ID %s</source>
             </trans-unit>
-            <trans-unit id="tl_category.edit.0">
+            <trans-unit id="tl_teacher_category.edit.0">
                 <source>Edit category</source>
             </trans-unit>
-            <trans-unit id="tl_category.edit.1">
+            <trans-unit id="tl_teacher_category.edit.1">
                 <source>Edit category ID %s</source>
             </trans-unit>
-            <trans-unit id="tl_category.copy.0">
+            <trans-unit id="tl_teacher_category.copy.0">
                 <source>Duplicate category</source>
             </trans-unit>
-            <trans-unit id="tl_category.copy.1">
+            <trans-unit id="tl_teacher_category.copy.1">
                 <source>Duplicate category ID %s</source>
             </trans-unit>
-            <trans-unit id="tl_category.delete.0">
+            <trans-unit id="tl_teacher_category.delete.0">
                 <source>Delete category</source>
             </trans-unit>
-            <trans-unit id="tl_category.delete.1">
+            <trans-unit id="tl_teacher_category.delete.1">
                 <source>Delete category ID %s</source>
             </trans-unit>
-            <trans-unit id="tl_category.title.0">
+            <trans-unit id="tl_teacher_category.title.0">
                 <source>Title</source>
             </trans-unit>
-            <trans-unit id="tl_category.title.1">
+            <trans-unit id="tl_teacher_category.title.1">
                 <source>The categorie's name</source>
             </trans-unit>
-            <trans-unit id="tl_category.cssClass.0">
+            <trans-unit id="tl_teacher_category.cssClass.0">
                 <source>CSS-Class</source>
             </trans-unit>
-            <trans-unit id="tl_category.cssClass.1">
+            <trans-unit id="tl_teacher_category.cssClass.1">
                 <source>One or more css-classes that get added to the root ul-tag referencing this category.</source>
             </trans-unit>
-            <trans-unit id="tl_category.title_legend">
+            <trans-unit id="tl_teacher_category.title_legend">
                 <source>Title</source>
             </trans-unit>
         </body>

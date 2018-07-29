@@ -1,3 +1,8 @@
+<?php
+/* JavaScript for the frontend-output */
+$GLOBALS['TL_JAVASCRIPT'][] = 'bundles/gywaschool/js/gywa_teacher_list.js';
+?>
+
 <div class="<?= $this->class ?> block">
     <?php if ($this->headline): ?>
     <<?= $this->hl ?>><?= $this->headline ?></<?= $this->hl ?>>
@@ -7,20 +12,23 @@
 
 <p><?= $this->lang['explanation'] ?></p>
 
+<?php $this->dumpTemplateVars() ?>
+
 <div class="tile-layout checkerboard folding-details">
-    <?php foreach ($this->categories as $escaped => $displayName): ?>
-        <div id="<?= $escaped ?>" class="category">'.
-            <h2><?= $displayName ?></h2>
-            <?php foreach ($this->teachers as $value): ?>
+    <?php foreach ($this->categories as $category): ?>
+        <div id="<?= $category['alias'] ?>" class="category <?= $category['cssClass'] ?>">
+            <h2><?= $category['title'] ?></h2>
+            <ul>
+            <?php foreach ($category['items'] as $value): ?>
                 <li>
-                    <img src="{{file::<?= $value['imgURL'] ?>}}">
+                    <img src="<?= $value['image'] ?>">
                     <div>
                         <p><?= $value['name'] ?></p>
                         <div class="subjects">
                             <?php foreach ($value['subjects'] as $subject_abbr_escaped): ?>
                                 <a href="{{link_url::<?= $this->subjects[$subject_abbr_escaped]['referencePage'] ?>}}"
                                    class="subject-color-<?= $subject_abbr_escaped ?>"
-                                   title="<?= $this->subjects[$subject_abbr_escaped]['title'] ?>"><?= $this->subjects[$subject_abbr_escaped]['title'] ?></a>
+                                   title="<?= $this->subjects[$subject_abbr_escaped]['title'] ?>"><?= $this->subjects[$subject_abbr_escaped]['abbreviation'] ?></a>
                             <?php endforeach; ?>
                         </div>
                         <div class="details">
@@ -28,17 +36,24 @@
                                 <img src="bundles/gywaschool/img/icon-signature.svg" title="<?= $this->lang['abbreviation'] ?>" alt="<?= $this->lang['abbreviation'] ?>">
                                 <?= $value['abbreviation'] ?>
                             </p>
+<!--
                             <p>
                                 <a href="mailto:<?= $value['emailAddress'] ?>"<?php if ($value['hasEmailExtension']) echo ' class="collapse-extension"'; ?>>
                                     <img src="bundles/gywaschool/img/icon-email-address.svg" title="<?= $this->lang['email'] ?>"
                                          alt="<?= $this->lang['email'] ?>">
                                     <?= $value['emailAddress'] . ($value['hasEmailExtension'] ? '@' . $this->emailDomain : '@...') ?>
                                 </a>
+-->
+                                <a href="<?= $value['emailAddress'] ?>">
+                                    <img src="bundles/gywaschool/img/icon-email-address.svg" title="<?= $this->lang['email'] ?>"
+                                         alt="<?= $this->lang['email'] ?>">
+                                </a>
                             </p>
                         </div>
                     </div>
                 </li>
             <?php endforeach; ?>
+            </ul>
         </div>
     <?php endforeach; ?>
 </div>

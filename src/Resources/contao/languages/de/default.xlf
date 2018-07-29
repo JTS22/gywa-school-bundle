@@ -27,7 +27,7 @@
                 <target>Kürzel</target>
             </trans-unit>
             <trans-unit id="MSC.gywa_teacher.email">
-                <source>Email adress</source>
+                <source>Email address</source>
                 <target>E-Mail-Adresse</target>
             </trans-unit>
             <trans-unit id="MSC.gywa_teacher.explanation">

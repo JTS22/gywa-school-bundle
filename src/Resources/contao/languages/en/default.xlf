@@ -14,6 +14,12 @@
             <trans-unit id="CTE.subject_list.1">
                 <source>A list of all subjects, optionally sorted by category</source>
             </trans-unit>
+            <trans-unit id="CTE.teacher_list.0">
+                <source>Teacher list</source>
+            </trans-unit>
+            <trans-unit id="CTE.teacher_list.1">
+                <source>A list of all teachers, optionally sorted by category</source>
+            </trans-unit>
             <trans-unit id="MSC.gywa_category.all">
                 <source>All</source>
             </trans-unit>
@@ -21,7 +27,7 @@
                 <source>Abbreviation</source>
             </trans-unit>
             <trans-unit id="MSC.gywa_teacher.email">
-                <source>Email adress</source>
+                <source>Email address</source>
             </trans-unit>
             <trans-unit id="MSC.gywa_teacher.explanation">
                 <source>Click on a teacher card for more details.</source>

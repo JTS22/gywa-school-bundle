@@ -31,8 +31,7 @@ class SubjectListController extends AbstractContentElementController
         $arrProperties = array();
         $allCategories = array();
 
-        $allowedCategories = unserialize($model->gywa_category_filter);
-
+        $allowedCategories = unserialize($model->gywaCategoryFilter);
 
         while ($category = $categoryStatement->fetch(FetchMode::STANDARD_OBJECT)) {
             if (!in_array($category->id, $allowedCategories)) continue;

@@ -25,7 +25,7 @@ class SubjectManager
         $this->database = $connection;
     }
 
-    public function onSubjectAbbrSaved(String $abbreviation, \DataContainer $dataContainer) {
+    public function onSubjectAbbrSaved(String $abbreviation, \DataContainer $dataContainer) : String {
         if (empty($abbreviation)) {
             $getDBCount = $this->database->prepare("SELECT * FROM tl_subject WHERE LOWER(abbreviation)=?");
             for ($i = 2; $i < 5; $i++) {

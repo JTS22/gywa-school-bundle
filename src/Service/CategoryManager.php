@@ -24,7 +24,19 @@ class CategoryManager
         $this->database = $connection;
     }
 
-    public function getAllCategories() : array {
+    public function getAllTeacherCategories() : array {
+        $result = array();
+
+        $statement = $this->database->prepare("SELECT id FROM tl_teacher_category");
+        $statement->execute();
+        while ($idObj = $statement->fetch(FetchMode::STANDARD_OBJECT)) {
+            array_push($result, $idObj->id);
+        }
+
+        return $result;
+    }
+
+    public function getAllSubjectCategories() : array {
         $result = array();
 
         $statement = $this->database->prepare("SELECT id FROM tl_category");
