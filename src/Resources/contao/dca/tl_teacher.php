@@ -76,7 +76,7 @@ $GLOBALS['TL_DCA']['tl_teacher'] = array
     // Palettes
     'palettes' => array
     (
-        'default' => '{title_legend},firstName,lastName,prefix,abbreviation,cssClass,category,image,{subjects_legend},subjects'
+        'default' => '{title_legend},firstName,lastName,prefix,abbreviation,cssClass,category,image;{subjects_legend},subjects'
     ),
     // Fields
     'fields' => array

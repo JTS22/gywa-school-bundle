@@ -55,8 +55,8 @@
                 <target>CSS-Klasse</target>
             </trans-unit>
             <trans-unit id="tl_teacher_category.cssClass.1">
-                <source>One or more css-classes that get added to the root ul-tag referencing this category.</source>
-                <target>Eine oder mehrere CSS-Klassen, die dem dieser Rolle zugehörigen ul-Tag zugewiesen werden</target>
+                <source>One or more css-classes that get added to the root div-tag referencing this category.</source>
+                <target>Eine oder mehrere CSS-Klassen, die dem dieser Rolle zugehörigen div-Tag zugewiesen werden</target>
             </trans-unit>
             <trans-unit id="tl_teacher_category.title_legend">
                 <source>Title</source>

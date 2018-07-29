@@ -67,6 +67,12 @@
             <trans-unit id="tl_teacher.subjects.1">
                 <source>All subjects taught by this teacher</source>
             </trans-unit>
+            <trans-unit id="tl_teacher.category.0">
+                <source>Role</source>
+            </trans-unit>
+            <trans-unit id="tl_teacher.category.1">
+                <source>The role this teacher belongs to</source>
+            </trans-unit>
             <trans-unit id="tl_teacher.title_legend">
                 <source>Name</source>
             </trans-unit>

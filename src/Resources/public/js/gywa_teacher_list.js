@@ -21,12 +21,14 @@ $(document).ready(function() {
 	$(".tile-layout.folding-details ul li").click(function(e) {
 		if($(e.target).prop("tagName") != "A") $(this).toggleClass("expanded"); // don't fold when link is clicked
 		
-		var el = $(".ce_teacher_list .details a");
+		var el = $(this).find(".details a");
 		var href = el.attr("href");
 		
 		if(href.indexOf("@") === -1) { // email address has not yet been substituted
-			if(href.length < 14) el.append(href + "@gy-waldstrasse.de").addClass("collapse-extension");
-			else el.append(href + "@...");
+			el.append(href + "@");
+			el.attr("href", "mailto:" + href + "@gy-waldstrasse.de");
+			
+			if(href.length < 13) el.addClass("collapse-extension");
 		}
 	});
 	

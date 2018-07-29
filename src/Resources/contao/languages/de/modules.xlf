@@ -26,6 +26,13 @@
                 <source>Manage school teachers</source>
                 <target>Lehrer verwalten</target>
             </trans-unit>
+            <trans-unit id="MOD.gywa_teacher_categories.0">
+                <source>Teacher roles</source>
+                <target>Lehrerrollen</target>
+            </trans-unit>
+            <trans-unit id="MOD.gywa_teacher_categories.1">
+                <source>Lehrerrollen verwalten</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

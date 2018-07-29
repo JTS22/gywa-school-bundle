@@ -89,6 +89,14 @@
                 <source>All subjects taught by this teacher</source>
                 <target>Alle Fächer, die dieser Lehrer unterrichtet</target>
             </trans-unit>
+            <trans-unit id="tl_teacher.category.0">
+                <source>Role</source>
+                <target>Rolle</target>
+            </trans-unit>
+            <trans-unit id="tl_teacher.category.1">
+                <source>The role this teacher belongs to</source>
+                <target>Die Rolle dieses Lehrers</target>
+            </trans-unit>
             <trans-unit id="tl_teacher.title_legend">
                 <source>Name</source>
                 <target>Name</target>

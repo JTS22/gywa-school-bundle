@@ -21,6 +21,30 @@
                 <source>Include a widget to toggle between the various categories</source>
                 <target>Zeige eine Liste von Buttons, die es ermöglicht, zwischen den Kategorien zu wechseln</target>
             </trans-unit>
+            <trans-unit id="tl_content.gywaDefaultTeacherImage.0">
+                <source>Default teacher picture</source>
+                <target>Standardprofilbild</target>
+            </trans-unit>
+            <trans-unit id="tl_content.gywaDefaultTeacherImage.1">
+                <source>The image that is shown if there is no image associated with a given teacher</source>
+                <target>Dieses Bild wird verwendet, wenn für einen Lehrer kein Profilbild ausgewählt wurde</target>
+            </trans-unit>
+            <trans-unit id="tl_content.gywaTeacherCategoryFilter.0">
+                <source>Filter list by role</source>
+                <target>Rollenliste filtern</target>
+            </trans-unit>
+            <trans-unit id="tl_content.gywaTeacherCategoryFilter.1">
+                <source>Only the selected roles with their respective teachers will appear in the list</source>
+                <target>Nur die ausgewählten Rollen werden mit ihren Lehrern in der Liste erscheinen</target>
+            </trans-unit>
+            <trans-unit id="tl_content.gywaTeacherEmailDomain.0">
+                <source>Email-domain</source>
+                <target>E-Mail-Domain</target>
+            </trans-unit>
+            <trans-unit id="tl_content.gywaTeacherEmailDomain.1">
+                <source>The domain the generated email-adresses belong to. This is the part that gets put after the @-sign</source>
+                <target>Die Domain, zu der die generierten E-Mail-Adressen gehören. Dies ist der Teil der Adresse nach dem @-Zeichen</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

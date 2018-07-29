@@ -16,6 +16,24 @@
             <trans-unit id="tl_content.gywaDisplayCategoryToggler.1">
                 <source>Include a widget to toggle between the various categories</source>
             </trans-unit>
+            <trans-unit id="tl_content.gywaDefaultTeacherImage.0">
+                <source>Default teacher picture</source>
+            </trans-unit>
+            <trans-unit id="tl_content.gywaDefaultTeacherImage.1">
+                <source>The image that is shown if there is no image associated with a given teacher</source>
+            </trans-unit>
+            <trans-unit id="tl_content.gywaTeacherCategoryFilter.0">
+                <source>Filter list by role</source>
+            </trans-unit>
+            <trans-unit id="tl_content.gywaTeacherCategoryFilter.1">
+                <source>Only the selected roles with their respective teachers will appear in the list</source>
+            </trans-unit>
+            <trans-unit id="tl_content.gywaTeacherEmailDomain.0">
+                <source>Email-domain</source>
+            </trans-unit>
+            <trans-unit id="tl_content.gywaTeacherEmailDomain.1">
+                <source>The domain the generated email-adresses belong to. This is the part that gets put after the @-sign</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

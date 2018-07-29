@@ -70,7 +70,12 @@ class TeacherListController extends AbstractContentElementController
 
         $categoryStatement = $this->database->prepare("SELECT * FROM tl_teacher_category");
         $categoryStatement->execute();
+
+        $allowedCategories = unserialize($model->gywaTeacherCategoryFilter);
+
         while ($category = $categoryStatement->fetch(FetchMode::STANDARD_OBJECT)) {
+
+            if (!in_array($category->id, $allowedCategories)) continue;
 
             $allTeachers = array();
             $teacherStatement->execute([$category->id]);
@@ -125,6 +130,11 @@ class TeacherListController extends AbstractContentElementController
         $template->emailDomain = $model->gywaTeacherEmailDomain;
         $template->togglerCode = $togglerTemplate->parse();
         $template->subjects = $allSubjects;
+        $template->lang = array(
+            'explanation' => sprintf($GLOBALS['TL_LANG']['MSC']['gywa_teacher']['explanation']),
+            'email' => sprintf($GLOBALS['TL_LANG']['MSC']['gywa_teacher']['email']),
+            'abbreviation' => sprintf($GLOBALS['TL_LANG']['MSC']['gywa_teacher']['abbreviation'])
+        );
 
         return $template->getResponse();
 

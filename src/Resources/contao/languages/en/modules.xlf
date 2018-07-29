@@ -20,6 +20,12 @@
             <trans-unit id="MOD.gywa_teachers.1">
                 <source>Manage school teachers</source>
             </trans-unit>
+            <trans-unit id="MOD.gywa_teacher_categories.0">
+                <source>Teacher roles</source>
+            </trans-unit>
+            <trans-unit id="MOD.gywa_teacher_categories.1">
+                <source>Manage teacher roles</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

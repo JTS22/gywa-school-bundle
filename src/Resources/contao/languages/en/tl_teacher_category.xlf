@@ -41,7 +41,7 @@
                 <source>CSS-Class</source>
             </trans-unit>
             <trans-unit id="tl_teacher_category.cssClass.1">
-                <source>One or more css-classes that get added to the root ul-tag referencing this category.</source>
+                <source>One or more css-classes that get added to the root div-tag referencing this category.</source>
             </trans-unit>
             <trans-unit id="tl_teacher_category.title_legend">
                 <source>Title</source>
