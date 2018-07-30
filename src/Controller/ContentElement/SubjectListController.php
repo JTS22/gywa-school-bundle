@@ -8,6 +8,7 @@ use Contao\FrontendTemplate;
 use Contao\Template;
 use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\FetchMode;
+use function PHPSTORM_META\map;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -37,16 +38,21 @@ class SubjectListController extends AbstractContentElementController
             if (!in_array($category->id, $allowedCategories)) continue;
 
             $subjectStatement->execute(array($category->id));
+            $result = $subjectStatement->fetchAll(FetchMode::STANDARD_OBJECT);
+
+            if (!$model->gywaDisplayEmptyCategories && empty($result)) continue;
 
             $allSubjects = array();
 
-            while ($subject = $subjectStatement->fetch()) {
-                array_push($allSubjects, array(
-                    'title' => $subject['title'],
-                    'abbreviation' => strtolower($subject['abbreviation']),
-                    'page' => $subject['referencePage'],
-                    'css' => $subject['cssClass']
-                ));
+            if (!empty($result)) {
+                foreach ($result as $subject) {
+                    array_push($allSubjects, array(
+                        'title' => $subject->title,
+                        'abbreviation' => strtolower($subject->abbreviation),
+                        'page' => $subject->referencePage,
+                        'css' => $subject->cssClass
+                    ));
+                }
             }
 
             $categoryName = str_replace(["ä", "ö", "ü", "_", " ", "/", ","], ["ae", "oe", "ue", "-", "-", "-", "-"], mb_strtolower($category->title));

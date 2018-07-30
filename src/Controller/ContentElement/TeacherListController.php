@@ -35,10 +35,15 @@ class TeacherListController extends AbstractContentElementController
         $this->database = $db;
     }
 
-
     private function escapeHTML($string)
     {
         return str_replace(['ä', 'ö', 'ü', '_', ' '], ['ae', 'oe', 'ue', '-', '-'], mb_strtolower($string));
+    }
+
+    /* I'm sure this is highly performance-efficient... lets hope nobody wants to have 1000+ subjects to check... */
+    private function applySubjectFilter(array $teacherSubjects, array $filterSubjects, bool $requireAll): bool
+    {
+        return $requireAll ? !array_diff($filterSubjects, $teacherSubjects) : (bool)array_intersect($filterSubjects, $teacherSubjects);
     }
 
     protected function getResponse(Template $template, ContentModel $model, Request $request): Response
@@ -52,20 +57,20 @@ class TeacherListController extends AbstractContentElementController
 
         if (!empty($result)) {
 
-            foreach ($result as $row) {
+            foreach ($result as $teacherRow) {
 
-                $allSubjects[$this->escapeHTML($row['abbreviation'])] = [
-                    'referencePage' => $row['referencePage'],
-                    'abbreviation' => $row['abbreviation'],
-                    'title' => $row['title']
+                $allSubjects[$this->escapeHTML($teacherRow['abbreviation'])] = [
+                    'referencePage' => $teacherRow['referencePage'],
+                    'abbreviation' => $teacherRow['abbreviation'],
+                    'title' => $teacherRow['title']
                 ];
             }
         }
 
         unset($subjectStatement);
         $subjectStatement = $this->database->prepare('SELECT abbreviation FROM tl_subject WHERE id = ? LIMIT 1');
-
         $teacherStatement = $this->database->prepare('SELECT * FROM tl_teacher WHERE category = ? ORDER BY lastName ASC');
+
         $allCategories = array();
 
         $categoryStatement = $this->database->prepare("SELECT * FROM tl_teacher_category");
@@ -77,35 +82,37 @@ class TeacherListController extends AbstractContentElementController
 
             if (!in_array($category->id, $allowedCategories)) continue;
 
-            $allTeachers = array();
+            $teachersInCategory = array();
             $teacherStatement->execute([$category->id]);
-
-            $result = $teacherStatement->fetchAll(FetchMode::ASSOCIATIVE);
+            $result = $teacherStatement->fetchAll(FetchMode::STANDARD_OBJECT);
 
             if (!empty($result)) {
-                foreach ($result as $row) {
-                    $name = $row['lastName'] . ',' . (strlen($row['lastName']) < 15 ? '<br>' : ' ') . (!is_null($row['prefix']) ? $row['prefix'] . '&nbsp;' : '') . $row['firstName'];
+                foreach ($result as $teacherRow) {
+
+                    if (!$this->applySubjectFilter(unserialize($teacherRow->subjects), unserialize($model->gywaSubjectFilter), $model->gywaSubjectFilterRequireAll)) continue;
+
+                    $name = $teacherRow->lastName . ',' . (strlen($teacherRow->lastName) < 15 ? '<br>' : ' ') . (!is_null($teacherRow->prefix) ? $teacherRow->prefix . '&nbsp;' : '') . $teacherRow->firstName;
                     $subjects = array();
 
-                    if ($row['subjects']) {
-                        foreach (unserialize($row['subjects']) as $subjectID) {
+                    if ($teacherRow->subjects) {
+                        foreach (unserialize($teacherRow->subjects) as $subjectID) {
                             $subjectStatement->execute([$subjectID]);
                             $result = $subjectStatement->fetch(FetchMode::ASSOCIATIVE);
                             $subjects[] = $this->escapeHTML($result['abbreviation']);
                         }
                         sort($subjects);
                     }
-                    $emailAddress = $this->escapeHTML(substr($row['firstName'], 0, 1) . '.' . $row['lastName']);
+                    $emailAddress = $this->escapeHTML(substr($teacherRow->firstName, 0, 1) . '.' . $teacherRow->lastName);
 
-                    if ($row['image']) {
-                        $imagePath = FilesModel::findByUuid($row['image'])->path;
+                    if ($teacherRow->image) {
+                        $imagePath = FilesModel::findByUuid($teacherRow->image)->path;
                     } else {
                         $imagePath = FilesModel::findByUuid($model->gywaDefaultTeacherImage)->path;
                     }
 
-                    array_push($allTeachers, array(
+                    array_push($teachersInCategory, array(
                         'name' => $name,
-                        'abbreviation' => $row['abbreviation'],
+                        'abbreviation' => $teacherRow->abbreviation,
                         'subjects' => $subjects,
                         'image' => $imagePath,
                         'emailAddress' => $emailAddress
@@ -114,12 +121,14 @@ class TeacherListController extends AbstractContentElementController
                 }
             }
 
+            if (!$model->gywaDisplayEmptyCategories && empty($teachersInCategory)) continue;
+
             $categoryName = str_replace(["ä", "ö", "ü", "_", " ", "/", ","], ["ae", "oe", "ue", "-", "-", "-", "-"], mb_strtolower($category->title));
             array_push($allCategories, array(
                 'title' => $category->title,
                 'alias' => $categoryName,
                 'cssClass' => $category->cssClass,
-                'items' => $allTeachers));
+                'items' => $teachersInCategory));
 
         }
 

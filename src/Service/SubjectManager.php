@@ -5,6 +5,7 @@ namespace GyWa\SchoolBundle;
 
 
 use Doctrine\DBAL\Connection;
+use Doctrine\DBAL\FetchMode;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\Config\Definition\Exception\Exception;
 
@@ -23,6 +24,17 @@ class SubjectManager
     {
         $this->logger = $logger;
         $this->database = $connection;
+    }
+
+    public function getAllSubjects() : array {
+        $result = array();
+
+        $statement = $this->database->prepare("SELECT id FROM tl_subject");
+        $statement->execute();
+        while ($idObj = $statement->fetch(FetchMode::STANDARD_OBJECT)) {
+            array_push($result, $idObj->id);
+        }
+        return $result;
     }
 
     public function onSubjectAbbrSaved(String $abbreviation, \DataContainer $dataContainer) : String {

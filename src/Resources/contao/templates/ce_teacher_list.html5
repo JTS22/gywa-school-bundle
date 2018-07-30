@@ -36,14 +36,6 @@ $GLOBALS['TL_JAVASCRIPT'][] = 'bundles/gywaschool/js/gywa_teacher_list.js';
                                              alt="<?= $this->lang['abbreviation'] ?>">
                                         <?= $value['abbreviation'] ?>
                                     </p>
-                                    <!--
-                                <p>
-                                    <a href="mailto:<?= $value['emailAddress'] ?>"<?php if ($value['hasEmailExtension']) echo ' class="collapse-extension"'; ?>>
-                                        <img src="bundles/gywaschool/img/icon-email-address.svg" title="<?= $this->lang['email'] ?>"
-                                             alt="<?= $this->lang['email'] ?>">
-                                        <?= $value['emailAddress'] . ($value['hasEmailExtension'] ? '@' . $this->emailDomain : '@...') ?>
-                                    </a>
-    -->
                                     <p>
                                         <a href="<?= $value['emailAddress'] ?>">
                                             <img src="bundles/gywaschool/img/icon-email-address.svg"

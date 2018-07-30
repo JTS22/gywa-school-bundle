@@ -2,48 +2,61 @@
     <file datatype="php" original="src/Resources/contao/languages/en/tl_content.php" source-language="en">
         <body>
             <trans-unit id="tl_content.subject_legend">
-                <source>Subjects and categories</source>
                 <target>Fächer und Kategorien</target>
             </trans-unit>
+            <trans-unit id="tl_content.teacher_legend">
+                <target>Lehrer</target>
+            </trans-unit>
+            <trans-unit id="tl_content.filter_legend">
+                <target>Filter</target>
+            </trans-unit>
             <trans-unit id="tl_content.gywaCategoryFilter.0">
-                <source>Filter list by category</source>
                 <target>Kategorienliste filtern</target>
             </trans-unit>
             <trans-unit id="tl_content.gywaCategoryFilter.1">
-                <source>Only the selected categories with their respective subjects will appear in the list</source>
                 <target>Nur die ausgewählten Kategorien werden mit ihren Fächern in der Liste erscheinen</target>
             </trans-unit>
             <trans-unit id="tl_content.gywaDisplayCategoryToggler.0">
-                <source>Display category toggler</source>
                 <target>Zeige Kategoriewechsler</target>
             </trans-unit>
             <trans-unit id="tl_content.gywaDisplayCategoryToggler.1">
-                <source>Include a widget to toggle between the various categories</source>
                 <target>Zeige eine Liste von Buttons, die es ermöglicht, zwischen den Kategorien zu wechseln</target>
             </trans-unit>
             <trans-unit id="tl_content.gywaDefaultTeacherImage.0">
-                <source>Default teacher picture</source>
                 <target>Standardprofilbild</target>
             </trans-unit>
             <trans-unit id="tl_content.gywaDefaultTeacherImage.1">
-                <source>The image that is shown if there is no image associated with a given teacher</source>
                 <target>Dieses Bild wird verwendet, wenn für einen Lehrer kein Profilbild ausgewählt wurde</target>
             </trans-unit>
             <trans-unit id="tl_content.gywaTeacherCategoryFilter.0">
-                <source>Filter list by role</source>
-                <target>Rollenliste filtern</target>
+                <target>Liste nach Rolle filtern</target>
             </trans-unit>
             <trans-unit id="tl_content.gywaTeacherCategoryFilter.1">
-                <source>Only the selected roles with their respective teachers will appear in the list</source>
                 <target>Nur die ausgewählten Rollen werden mit ihren Lehrern in der Liste erscheinen</target>
             </trans-unit>
             <trans-unit id="tl_content.gywaTeacherEmailDomain.0">
-                <source>Email-domain</source>
                 <target>E-Mail-Domain</target>
             </trans-unit>
             <trans-unit id="tl_content.gywaTeacherEmailDomain.1">
-                <source>The domain the generated email-adresses belong to. This is the part that gets put after the @-sign</source>
                 <target>Die Domain, zu der die generierten E-Mail-Adressen gehören. Dies ist der Teil der Adresse nach dem @-Zeichen</target>
+            </trans-unit>
+            <trans-unit id="tl_content.gywaSubjectFilter.0">
+                <target>Liste nach Fächern filtern</target>
+            </trans-unit>
+            <trans-unit id="tl_content.gywaSubjectFilter.1">
+                <target>Es werden nur die Lehrer angezeigt, deren Fächer mit dem Filter übereinstimmen</target>
+            </trans-unit>
+            <trans-unit id="tl_content.gywaSubjectFilterRequireAll.0">
+                <target>Filter nach allen gelisteten Fächern</target>
+            </trans-unit>
+            <trans-unit id="tl_content.gywaSubjectFilterRequireAll.1">
+                <target>Ist diese Option aktiv, müssen Lehrer alle angegeben Fächer geben, um in der Liste angezeigt zu werden, ansonsten reicht ein Fach aus der Liste</target>
+            </trans-unit>
+            <trans-unit id="tl_content.gywaDisplayEmptyCategories.0">
+                <target>Leere Kategorien anzeigen</target>
+            </trans-unit>
+            <trans-unit id="tl_content.gywaDisplayEmptyCategories.1">
+                <target>Die Überschriften der Kategorien auch dann zeigen, wenn eine Kategorie keine Elemente enthält</target>
             </trans-unit>
         </body>
     </file>
