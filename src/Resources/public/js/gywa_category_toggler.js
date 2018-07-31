@@ -4,8 +4,8 @@ $(document).ready(function() {
 
 	function updateActive() {
 		$("#category-toggler a").each(function() {
-			var href = $(this).attr("href");
-			var ownCategory = (href.indexOf("#") != -1 ? href.substring(href.indexOf("#") + 1) : "all");
+            const href = $(this).attr("href");
+            const ownCategory = (href.indexOf("#") != -1 ? href.substring(href.indexOf("#") + 1) : "all");
 			
 			if(ownCategory == window.category) $(this).addClass("active");
 			else $(this).removeClass("active");
@@ -21,9 +21,9 @@ $(document).ready(function() {
     $("#category-toggler a").click(function(e) {
         e.preventDefault();
 
-        var url = $(this).attr("href");
+        const url = $(this).attr("href");
 
-        var clicked_category = (url.indexOf("#") != -1 ? url.substring(url.indexOf("#") + 1) : "all");
+        const clicked_category = (url.indexOf("#") != -1 ? url.substring(url.indexOf("#") + 1) : "all");
 
         if(clicked_category != window.category) {
             window.category = clicked_category;
