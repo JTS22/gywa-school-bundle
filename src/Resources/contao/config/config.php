@@ -5,8 +5,8 @@ $GLOBALS['BE_MOD']['content']['gywa_subjects'] = array(
     'list' => ['ListWizard', 'importList']
 );
 
-$GLOBALS['BE_MOD']['content']['gywa_categories'] = array(
-    'tables' => ['tl_category'],
+$GLOBALS['BE_MOD']['content']['gywa_subject_categories'] = array(
+    'tables' => ['tl_subject_category'],
     'table' => ['TableWizard', 'importTable'],
     'list' => ['ListWizard', 'importList']
 );

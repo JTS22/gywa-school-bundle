@@ -10,11 +10,11 @@
                 <source>Manage school subjects</source>
                 <target>Schulfächer verwalten</target>
             </trans-unit>
-            <trans-unit id="MOD.gywa_categories.0">
+            <trans-unit id="MOD.gywa_subject_categories.0">
                 <source>Categories</source>
                 <target>Kategorien</target>
             </trans-unit>
-            <trans-unit id="MOD.gywa_categories.1">
+            <trans-unit id="MOD.gywa_subject_categories.1">
                 <source>Manage subject categories</source>
                 <target>Fächerkategorien verwalten</target>
             </trans-unit>
@@ -31,7 +31,8 @@
                 <target>Lehrerrollen</target>
             </trans-unit>
             <trans-unit id="MOD.gywa_teacher_categories.1">
-                <source>Lehrerrollen verwalten</source>
+                <source>Manage teacher roles</source>
+                <target>Lehrerrollen verwalten</target>
             </trans-unit>
         </body>
     </file>

@@ -39,7 +39,7 @@ class CategoryManager
     public function getAllSubjectCategories() : array {
         $result = array();
 
-        $statement = $this->database->prepare("SELECT id FROM tl_category");
+        $statement = $this->database->prepare("SELECT id FROM tl_subject_category");
         $statement->execute();
         while ($idObj = $statement->fetch(FetchMode::STANDARD_OBJECT)) {
             array_push($result, $idObj->id);

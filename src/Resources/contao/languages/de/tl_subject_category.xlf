@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <xliff version="1.2">
-    <file datatype="php" original="src/Resources/contao/languages/en/tl_subject.php" source-language="en" target-language="de">
+    <file datatype="php" original="src/Resources/contao/languages/en/tl_subject_category.php" source-language="en" target-language="de">
         <body>
             <trans-unit id="tl_subject_category.new.0">
                 <source>New category</source>
