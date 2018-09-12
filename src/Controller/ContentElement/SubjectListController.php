@@ -24,7 +24,7 @@ class SubjectListController extends AbstractContentElementController
 
     protected function getResponse(Template $template, ContentModel $model, Request $request): Response
     {
-        $categoryStatement = $this->database->prepare("SELECT * FROM tl_category");
+        $categoryStatement = $this->database->prepare("SELECT * FROM tl_subject_category");
         $categoryStatement->execute();
 
         $subjectStatement = $this->database->prepare("SELECT * FROM tl_subject WHERE category=? ORDER BY title ASC");

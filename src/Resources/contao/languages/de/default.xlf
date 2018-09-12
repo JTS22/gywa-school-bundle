@@ -18,6 +18,10 @@
                 <source>A list of all subjects, optionally sorted by category</source>
                 <target>Eine Liste aller eingetragenen Fächer, sortiert nach Kategorien.</target>
             </trans-unit>
+            <trans-unit id="CTE.teacher_list.0">
+                <source>Teacher list</source>
+                <target>Lehrerliste</target>
+            </trans-unit>
             <trans-unit id="MSC.gywa_category.all">
                 <source>All</source>
                 <target>Alle</target>

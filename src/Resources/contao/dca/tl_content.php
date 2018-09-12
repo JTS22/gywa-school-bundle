@@ -28,7 +28,7 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['gywaCategoryFilter'] = array(
 $GLOBALS['TL_DCA']['tl_content']['fields']['gywaDefaultTeacherImage'] = array(
     'label' => $GLOBALS['TL_LANG']['tl_content']['gywaDefaultTeacherImage'],
     'inputType' => 'fileTree',
-    'eval' => array('mandatory' => true, 'filesOnly' => true, 'fieldType' => 'radio', 'tl_class' => '', 'extensions' => Config::get('validImageTypes')),
+    'eval' => array('mandatory' => true, 'filesOnly' => true, 'fieldType' => 'radio', 'tl_class' => 'clr', 'extensions' => Config::get('validImageTypes')),
     'sql' => "binary(16) NULL"
 );
 
