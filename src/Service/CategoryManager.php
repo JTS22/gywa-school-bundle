@@ -5,6 +5,7 @@ namespace GyWa\SchoolBundle;
 
 
 use Doctrine\DBAL\Connection;
+use Doctrine\DBAL\DBALException;
 use Doctrine\DBAL\FetchMode;
 use Psr\Log\LoggerInterface;
 
@@ -26,25 +27,32 @@ class CategoryManager
 
     public function getAllTeacherCategories() : array {
         $result = array();
-
-        $statement = $this->database->prepare("SELECT id FROM tl_teacher_category");
-        $statement->execute();
-        while ($idObj = $statement->fetch(FetchMode::STANDARD_OBJECT)) {
-            array_push($result, $idObj->id);
+        try {
+            $statement = $this->database->prepare("SELECT id FROM tl_teacher_category");
+            if ($statement->execute()) {
+                while ($idObj = $statement->fetch(FetchMode::STANDARD_OBJECT)) {
+                    array_push($result, $idObj->id);
+                }
+            }
+        } catch (DBALException $e) {
+            $this->logger->error("Teacher categories could not be loaded from database! Please ensure the table tl_teacher_category exists!");
         }
-
         return $result;
     }
 
     public function getAllSubjectCategories() : array {
         $result = array();
 
-        $statement = $this->database->prepare("SELECT id FROM tl_subject_category");
-        $statement->execute();
-        while ($idObj = $statement->fetch(FetchMode::STANDARD_OBJECT)) {
-            array_push($result, $idObj->id);
+        try {
+            $statement = $this->database->prepare("SELECT id FROM tl_subject_category");
+            if($statement->execute()) {
+                while ($idObj = $statement->fetch(FetchMode::STANDARD_OBJECT)) {
+                    array_push($result, $idObj->id);
+                }
+            }
+        } catch (DBALException $e) {
+            $this->logger->error("Teacher categories could not be loaded from database! Please ensure the table tl_subject_category exists!");
         }
-
         return $result;
     }
 

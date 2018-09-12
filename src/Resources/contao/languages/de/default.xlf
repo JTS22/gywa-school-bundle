@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2">
-    <file datatype="php" original="src/Resources/contao/languages/en/modules.php" source-language="en" target-language="de">
+    <file datatype="php" original="src/Resources/contao/languages/de/modules.php" source-language="en" target-language="de">
         <body>
             <trans-unit id="CTE.gywa_school.0">
                 <source>GyWa SchoolBundle</source>
