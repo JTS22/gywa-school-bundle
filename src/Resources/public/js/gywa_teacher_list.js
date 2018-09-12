@@ -1,3 +1,4 @@
+
 function changeColor(color, amount) {
     const split = color.split(", ");
 
