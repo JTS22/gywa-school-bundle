@@ -17,7 +17,7 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['gywaDisplayCategoryToggler'] = array
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['gywaCategoryFilter'] = array(
     'label' => $GLOBALS['TL_LANG']['tl_content']['gywaCategoryFilter'],
-    'foreignKey' => 'tl_category.title',
+    'foreignKey' => 'tl_subject_category.title',
     'inputType' => 'checkboxWizard',
     'default' => System::getContainer()->get('gywaschoolbundle.categoryManager')->getAllSubjectCategories(),
     'eval' => array('multiple' => true),
