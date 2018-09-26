@@ -132,7 +132,7 @@ $GLOBALS['TL_DCA']['tl_subject'] = array
         'category' => array(
             'label' => $GLOBALS['TL_LANG']['tl_subject']['category'],
             'inputType' => 'select',
-            'foreignKey' => 'tl_category.title',
+            'foreignKey' => 'tl_subject_category.title',
             'eval' => array('mandatory' => true, 'chosen' => true, 'tl_class' => 'w50'),
             'relation' => array('type' => 'hasOne', 'load' => 'lazy'),
             'sql' => "int(10) unsigned NOT NULL default '0'"
