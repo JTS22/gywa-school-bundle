@@ -37,10 +37,10 @@ $GLOBALS['TL_JAVASCRIPT'][] = 'bundles/gywaschool/js/gywa_teacher_list.js';
                                         <?= $value['abbreviation'] ?>
                                     </p>
                                     <p>
-                                        <a href="<?= $value['emailAddress'] ?>">
+                                        <a data-email-address="<?= $value['emailAddress'] ?>">
                                             <img src="bundles/gywaschool/img/icon-email-address.svg"
-                                                 title="<?= $this->lang['email'] ?>"
-                                                 alt="<?= $this->lang['email'] ?>">
+                                                title="<?= $this->lang['email'] ?>"
+                                                alt="<?= $this->lang['email'] ?>">
                                         </a>
                                     </p>
                                 </div>
