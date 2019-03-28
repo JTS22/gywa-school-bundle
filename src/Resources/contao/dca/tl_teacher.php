@@ -167,10 +167,10 @@ $GLOBALS['TL_DCA']['tl_teacher'] = array
         ),
         'category' => array(
             'label' => $GLOBALS['TL_LANG']['tl_teacher']['category'],
-            'inputType' => 'select',
+            'inputType' => 'checkboxWizard',
             'foreignKey' => 'tl_teacher_category.title',
-            'eval' => array('mandatory' => true, 'chosen' => true, 'tl_class' => 'w50'),
-            'relation' => array('type' => 'hasOne', 'load' => 'lazy'),
+            'eval' => array('mandatory' => true, 'chosen' => true, 'tl_class' => 'clr'),
+            'relation' => array('type' => 'hasMany', 'load' => 'lazy'),
             'sql' => "int(10) unsigned NOT NULL default '0'"
         )
     )
