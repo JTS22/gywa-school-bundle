@@ -33,8 +33,11 @@ $(document).ready(function() {
 		let email_address = el.data("email-address"); // email address is previously inserted into data-email-address attribute in the template
 		
 		if(email_address !== "") { // email address has not yet been substituted
-			el.append(email_address + "@");
-			el.attr("href", "mailto:" + email_address + "@gy-waldstrasse.de");
+			let split = email_address.split("@");
+			let email_domain = split[1];
+
+			el.append(split[0] + "@<span class=\"email-domain\">" + email_domain + "</span>");
+			el.attr("href", "mailto:" + email_address);
 			
 			if(email_address.length < 13)
 				el.addClass("collapse-extension");

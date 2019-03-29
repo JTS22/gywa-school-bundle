@@ -35,9 +35,9 @@ class TeacherListController extends AbstractContentElementController
         $this->database = $db;
     }
 
-    private function escapeHTML($string)
+    private function escapeHTML(string $s)
     {
-        return str_replace(['ä', 'ö', 'ü', '_', ' '], ['ae', 'oe', 'ue', '-', '-'], mb_strtolower($string));
+        return str_replace(["ä", "ö", "ü", "_", " ", "/", ",", "ß", "*"], ["ae", "oe", "ue", "-", "-", "-", "-", "ss", "-"], mb_strtolower($s));
     }
 
     /* I'm sure this is highly performance-efficient... lets hope nobody wants to have 1000+ subjects to check... */
@@ -94,7 +94,8 @@ class TeacherListController extends AbstractContentElementController
                     if (!$this->applySubjectFilter(unserialize($teacherRow->subjects), unserialize($model->gywaSubjectFilter), $model->gywaSubjectFilterRequireAll)) continue;
                     if (!in_array($category->id, unserialize($teacherRow->category))) continue;
 
-                    $name = $teacherRow->lastName . ',' . (strlen($teacherRow->lastName) < 15 ? '<br>' : ' ') . (!is_null($teacherRow->prefix) ? $teacherRow->prefix . '&nbsp;' : '') . $teacherRow->firstName;
+                    $name = $teacherRow->lastName . ',' . (strlen($teacherRow->lastName) <= 16 ? '<br>' : ' ') . (!is_null($teacherRow->prefix) ? $teacherRow->prefix . '&nbsp;' : '') . $teacherRow->firstName;
+                    // echo strlen($teacherRow->lastName), "<br>";
                     $subjects = array();
 
                     if ($teacherRow->subjects) {
@@ -105,7 +106,9 @@ class TeacherListController extends AbstractContentElementController
                         }
                         sort($subjects);
                     }
-                    $emailAddress = $this->escapeHTML(substr($teacherRow->firstName, 0, 1) . '.' . $teacherRow->lastName);
+
+                    // build email address
+                    $emailAddress = $this->escapeHTML(substr($teacherRow->firstName, 0, 1) . '.' . $teacherRow->lastName . '@' . $model->gywaTeacherEmailDomain);
 
                     if ($teacherRow->image) {
                         $imagePath = FilesModel::findByUuid($teacherRow->image)->path;
@@ -126,7 +129,8 @@ class TeacherListController extends AbstractContentElementController
 
             if (!$model->gywaDisplayEmptyCategories && empty($teachersInCategory)) continue;
 
-            $categoryName = str_replace(["ä", "ö", "ü", "_", " ", "/", ",", "ß", "*"], ["ae", "oe", "ue", "-", "-", "-", "-", "ss", "-"], mb_strtolower($category->title));
+            $categoryName = $this->escapeHTML($category->title);
+
             array_push($allCategories, array(
                 'title' => $category->title,
                 'alias' => $categoryName,
@@ -139,7 +143,7 @@ class TeacherListController extends AbstractContentElementController
         $togglerTemplate->setData(array('categoryList' => $allCategories, 'allName' => sprintf($GLOBALS['TL_LANG']['MSC']['gywa_category']['all'])));
 
         $template->categories = $allCategories;
-        $template->emailDomain = $model->gywaTeacherEmailDomain;
+        // $template->emailDomain = $model->gywaTeacherEmailDomain; // not in use
         $template->togglerCode = $togglerTemplate->parse();
         $template->subjects = $allSubjects;
         $template->lang = array(
