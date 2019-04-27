@@ -37,7 +37,7 @@ class TeacherListController extends AbstractContentElementController
 
     private function escapeHTML(string $s)
     {
-        return str_replace(["ä", "ö", "ü", "_", " ", "/", ",", "ß", "*"], ["ae", "oe", "ue", "-", "-", "-", "-", "ss", "-"], mb_strtolower($s));
+        return str_replace(["ä", "ö", "ü", "_", " ", "/", ",", "ß", "*"], ["ae", "oe", "ue", "-", "", "-", "-", "ss", "-"], mb_strtolower($s));
     }
 
     /* I'm sure this is highly performance-efficient... lets hope nobody wants to have 1000+ subjects to check... */
